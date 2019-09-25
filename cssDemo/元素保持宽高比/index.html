@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../common/common.css">
+  <style>
+    .app {
+      width: 100vw;
+      height: 100vh;
+      background-color: aquamarine;
+    }
+
+    .constant-width-to-height-ratio {
+      margin: 0 auto;
+      background-color: red;
+      width: 50%;
+    }
+
+    .constant-width-to-height-ratio::before {
+      padding-top: 100%;
+      content: '';
+      float: left;
+    }
+
+    .constant-width-to-height-ratio::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="constant-width-to-height-ratio"></div>
+  </div>
+</body>
+</html>
