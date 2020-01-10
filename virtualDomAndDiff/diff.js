@@ -59,9 +59,7 @@ class Diff {
         });
         lastIndex = lastIndex + 1;
       }
-      else if (typeof node === 'string') {
-        return
-      } else {
+      else {
         // 老节点
 
         // 深度遍地子节点树
