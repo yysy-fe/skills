@@ -41,11 +41,11 @@ const copyReg = target => {
 
 const copyFunction = target => {
   const funcStr = target.toString();
-  let paramsRes = funcStr.match(/\((.*)\)/);
-  let paramsStr = paramsRes && paramsRes[1] && paramsRes[1].replace(/ /g, '') || '';
-  let paramArr = paramsStr.split(',');
-  let contentRes = funcStr.match(/function.*\(.*\)\s*\{([\s\S]*)\}/);
-  let contentStr = contentRes && contentRes[1] && contentRes[1].trim() || '';
+  const paramsRes = funcStr.match(/\((.*)\)/);
+  const paramsStr = paramsRes && paramsRes[1] && paramsRes[1].replace(/ /g, '') || '';
+  const paramArr = paramsStr.split(',');
+  const contentRes = funcStr.match(/function.*\(.*\)\s*\{([\s\S]*)\}/);
+  const contentStr = contentRes && contentRes[1] && contentRes[1].trim() || '';
   return new target.constructor(...paramArr, contentStr)
 };
 
